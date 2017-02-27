@@ -1,0 +1,85 @@
+// Loader cris
+// ==========================================================================
+$loader-cris--color1: #e74c3c
+$loader-cris--color2: #2ecc71
+$loader-cris--color3: #f1c40f
+
+.loader-cris
+
+  &:after
+    background-color: #3498db
+    border-radius: 50%
+    content: ''
+    height: 30px
+    left: 50%
+    position: fixed
+    top: 50%
+    width: 30px
+    animation: moveSquare 3s ease infinite both
+
+  &:before
+    width: 80px
+    height: 80px
+    position: fixed
+    content: ''
+    left: 50%
+    top: 50%
+    margin-top: -50px
+    animation: showCircles 6s ease infinite both
+
+@keyframes moveSquare
+  25%
+    transform: translateX(0) translateY(-50px)
+
+  50%
+    transform: translateX(50px) translateY(-50px)
+
+  75%
+    transform: translateX(50px) translateY(0)
+
+  100%
+    transform: translateX(0) translateY(0)
+
+@keyframes showCircles
+  12.5%
+    background: radial-gradient(circle, transparent 70%, transparent 71%), radial-gradient(circle, transparent 70%, transparent 71%), radial-gradient(circle, transparent 70%, transparent 71%)
+    background-size: 30px 30px, 30px 30px, 30px 30px
+    background-repeat: no-repeat
+    background-position: 0 0, 100% 0, 100% 100%
+
+  25%
+    background: radial-gradient(circle, $loader-cris--color1 70%, transparent 71%), radial-gradient(circle, transparent 70%, transparent 71%), radial-gradient(circle, transparent 70%, transparent 71%)
+    background-size: 30px 30px, 30px 30px, 30px 30px
+    background-repeat: no-repeat
+    background-position: 0 0, 100% 0, 100% 100%
+
+  37.5%
+    background: radial-gradient(circle, $loader-cris--color1 70%, transparent 71%), radial-gradient(circle, $loader-cris--color2 70%, transparent 71%), radial-gradient(circle, transparent 70%, transparent 71%)
+    background-size: 30px 30px, 30px 30px, 30px 30px
+    background-repeat: no-repeat
+    background-position: 0 0, 100% 0, 100% 100%
+
+  50%
+    background: radial-gradient(circle, $loader-cris--color1 70%, transparent 71%), radial-gradient(circle, $loader-cris--color2 70%, transparent 71%), radial-gradient(circle, $loader-cris--color3 70%, transparent 71%)
+    background-size: 30px 30px, 30px 30px, 30px 30px
+    background-repeat: no-repeat
+    background-position: 0 0, 100% 0, 100% 100%
+
+  75%
+    background: radial-gradient(circle, transparent 70%, transparent 71%), radial-gradient(circle, $loader-cris--color2 70%, transparent 71%), radial-gradient(circle, $loader-cris--color3 70%, transparent 71%)
+    background-size: 30px 30px, 30px 30px, 30px 30px
+    background-repeat: no-repeat
+    background-position: 0 0, 100% 0, 100% 100%
+
+  87.5%
+    background: radial-gradient(circle, transparent  70%, transparent 71%), radial-gradient(circle, transparent 70%, transparent 71%), radial-gradient(circle, $loader-cris--color3 70%, transparent 71%)
+    background-size: 30px 30px, 30px 30px, 30px 30px
+    background-repeat: no-repeat
+    background-position: 0 0, 100% 0, 100% 100%
+
+  100%
+    background: radial-gradient(circle, transparent  70%, transparent 71%), radial-gradient(circle, transparent 70%, transparent 71%), radial-gradient(circle, transparent 70%, transparent 71%)
+    background-size: 30px 30px, 30px 30px, 30px 30px
+    background-repeat: no-repeat
+    background-position: 0 0, 100% 0, 100% 100%
+    
